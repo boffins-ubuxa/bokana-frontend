@@ -1,0 +1,33 @@
+<svg width="220" height="60" viewBox="0 0 220 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Brand Color Definition -->
+  <defs>
+    <style>
+      .brand-slate { fill: #5C6670; }
+      .brand-amber { fill: #F5A623; }
+      .brand-text { font-family: sans-serif; font-weight: bold; }
+    </style>
+  </defs>
+
+  <!-- B -->
+  <path d="M10 15H22C25 15 27 16.5 27 19.5C27 21.5 26 23 24 24C26.5 25 28 27 28 30C28 34 25 36 21 36H10V15ZM21 23C22 23 23 22.5 23 21C23 19.5 22 19 21 19H15V23H21ZM22 32C23.5 32 24 31.5 24 30C24 28.5 23.5 28 22 28H15V32H22Z" class="brand-slate" />
+
+  <!-- O with Bolt -->
+  <circle cx="50" cy="25.5" r="11.5" class="brand-slate" />
+  <path d="M50.5 16L46 26.5H50.5L48.5 35L57 22.5H50.5L52.5 16H50.5Z" class="brand-amber" />
+
+  <!-- K -->
+  <path d="M72 15V36H77V28L83 36H89L81 26L88 15H82L77 22V15H72Z" class="brand-slate" />
+
+  <!-- A (Chevron Style) -->
+  <path d="M95 36L107 15L119 36H113L107 25L101 36H95Z" class="brand-slate" />
+
+  <!-- N -->
+  <path d="M125 36V15H130L141 30V15H146V36H141L130 21V36H125Z" class="brand-slate" />
+
+  <!-- A (Chevron Style) -->
+  <path d="M152 36L164 15L176 36H170L164 25L158 36H152Z" class="brand-slate" />
+
+  <!-- ELECTRONICS -->
+  <text x="95" y="52" fill="#5C6670" font-family="Arial, sans-serif" font-size="7.5" letter-spacing="6.5">ELECTRONICS</text>
+</svg>
+
