@@ -3,9 +3,9 @@ import TestimonialCard from '@/components/TestimonialCard';
 
 export default function TestimonialsPage() {
   return (
-    <div className="py-24 bg-[var(--background)] min-h-screen">
+    <div className="motion-fade py-24 bg-[var(--background)] min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
+        <div className="motion-rise text-center mb-16">
           <h1 className="text-5xl font-extrabold text-[var(--foreground)] mb-6">Customer Reviews</h1>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
             See what people are saying about their Bokana Electronics experience.

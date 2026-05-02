@@ -26,14 +26,14 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="py-24 bg-[var(--background)] min-h-screen">
+    <div className="motion-fade py-24 bg-[var(--background)] min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           
-          <div>
+          <div className="motion-rise">
             <h1 className="text-5xl font-extrabold text-[var(--foreground)] mb-6">Get in Touch</h1>
             <p className="text-xl text-gray-600 mb-12">
-              We're here to help you find the right power solution. Reach out to us for enquiries, bulk orders, or support.
+              We&apos;re here to help you find the right power solution. Reach out to us for enquiries, bulk orders, or support.
             </p>
             
             <div className="space-y-8">
@@ -82,7 +82,7 @@ export default function ContactPage() {
             </div>
           </div>
           
-          <div className="bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-gray-100">
+          <div className="motion-scale motion-delay-1 bg-white p-8 md:p-10 rounded-3xl shadow-lg border border-gray-100">
             <h3 className="text-2xl font-bold text-[var(--foreground)] mb-6">Send an Enquiry</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>

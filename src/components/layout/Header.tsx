@@ -1,11 +1,17 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import Button from '../ui/Button';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+  const pathname = usePathname();
+  const isHomePage = pathname === '/';
+  const useLightMobileHeader = !isHomePage || isScrolled;
 
   // Prevent body scroll when menu is open
   useEffect(() => {
@@ -19,6 +25,19 @@ export default function Header() {
     };
   }, [isOpen]);
 
+  // Handle scroll for glass effect and logo switching
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    
+    // Set initial state
+    handleScroll();
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const navLinks = [
     { name: 'Home', href: '/' },
     { name: 'About', href: '/about' },
@@ -28,15 +47,37 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 w-full glass">
+    <header 
+      className={`top-0 z-50 w-full transition-all duration-300 md:sticky md:glass 
+      max-md:fixed ${
+        isScrolled
+          ? 'glass shadow-sm max-md:bg-white/95'
+          : 'bg-transparent max-md:border-none'
+      } ${
+        useLightMobileHeader
+          ? 'max-md:bg-white/95 max-md:shadow-sm max-md:border-b max-md:border-black/5'
+          : 'max-md:bg-transparent'
+      }`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center" onClick={() => setIsOpen(false)}>
-              <img 
+              <Image 
+                src={useLightMobileHeader ? "/bokana-logo.svg" : "/bokana-logo-white.svg"} 
+                alt="Bokana Electronics" 
+                width={160}
+                height={48}
+                className="h-12 w-auto md:hidden transition-opacity duration-300"
+                priority
+              />
+              <Image 
                 src="/bokana-logo.svg" 
                 alt="Bokana Electronics" 
-                className="h-10 md:h-12 w-auto transition-all"
+                width={160}
+                height={48}
+                className="h-12 w-auto hidden md:block"
+                priority
               />
             </Link>
           </div>

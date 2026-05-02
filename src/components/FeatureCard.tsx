@@ -8,7 +8,7 @@ interface FeatureCardProps {
 
 export default function FeatureCard({ title, description, icon }: FeatureCardProps) {
   return (
-    <div className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300">
+    <div className="motion-rise motion-card bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg hover:border-[var(--bokana-amber)]/30 transition-all duration-300">
       <div className="w-12 h-12 rounded-xl bg-[var(--bokana-slate)]/10 text-[var(--bokana-slate)] flex items-center justify-center mb-6">
         {icon || (
           <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">

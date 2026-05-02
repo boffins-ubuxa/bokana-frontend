@@ -24,7 +24,7 @@ export default function ProductCard({ product, onViewDetails }: ProductCardProps
   const whatsappUrl = `https://wa.me/2347070708571?text=${whatsappMessage}`;
 
   return (
-    <div className="bg-white rounded-[2rem] p-5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-50 hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 transform hover:-translate-y-2 flex flex-col h-full group relative overflow-hidden">
+    <div className="motion-rise bg-white rounded-[2rem] p-5 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-50 hover:shadow-[0_20px_40px_rgb(0,0,0,0.08)] transition-all duration-500 transform hover:-translate-y-2 flex flex-col h-full group relative overflow-hidden">
       
       {/* Media Container */}
       <div 

@@ -1,5 +1,6 @@
 'use client';
 import React, { useRef, useEffect } from 'react';
+import Image from 'next/image';
 import { ProductMedia } from '@/data/products';
 
 interface ProductMediaViewProps {
@@ -44,10 +45,12 @@ export default function ProductMediaView({ media, className = '', alt }: Product
   // Fallback to image
   return (
     <div className={`relative w-full h-full bg-[var(--bokana-blush)] overflow-hidden flex items-center justify-center ${className}`}>
-      <img
+      <Image
         src={media.url}
         alt={alt}
-        className="object-cover w-full h-full"
+        fill
+        sizes="(max-width: 768px) 90vw, 420px"
+        className="object-cover"
         onError={(e) => {
           // Fallback if image fails to load
           const target = e.target as HTMLImageElement;

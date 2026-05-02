@@ -12,14 +12,10 @@ interface ProductModalProps {
 }
 
 export default function ProductModal({ product, initialVariant, isOpen, onClose }: ProductModalProps) {
-  const [selectedVariant, setSelectedVariant] = React.useState<ProductVariant | undefined>(initialVariant);
+  const [selectedVariant, setSelectedVariant] = React.useState<ProductVariant | undefined>(
+    initialVariant || (product.variants ? product.variants[0] : undefined)
+  );
   const [activeMediaIndex, setActiveMediaIndex] = React.useState(0);
-
-  // Reset state when product changes
-  useEffect(() => {
-    setSelectedVariant(initialVariant || (product.variants ? product.variants[0] : undefined));
-    setActiveMediaIndex(0);
-  }, [product, initialVariant]);
 
   // Prevent background scrolling when open
   useEffect(() => {

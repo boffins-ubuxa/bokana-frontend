@@ -1,21 +1,24 @@
 import React from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 
 export default function Footer() {
   return (
-    <footer className="bg-[var(--foreground)] text-white pt-16 pb-8">
+    <footer className="motion-fade bg-[var(--foreground)] text-white pt-16 pb-8">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-1">
             <Link href="/" className="mb-4 block">
-              <img 
+              <Image 
                 src="/bokana-logo-white.svg" 
                 alt="Bokana Electronics" 
+                width={140}
+                height={40}
                 className="h-10 w-auto"
               />
             </Link>
             <p className="text-gray-400 text-sm mb-6">
-              More Than a Powerbank. It's a Promise. Reliable power solutions for everyday life.
+              More Than a Powerbank. It&apos;s a Promise. Reliable power solutions for everyday life.
             </p>
           </div>
 

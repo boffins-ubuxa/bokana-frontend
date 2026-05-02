@@ -3,6 +3,7 @@
 :root {
   --background: #FCFBF9; /* Soft elegant off-white */
   --foreground: #2A2E33; /* Softer dark text instead of pure black */
+  --font-inter: "Inter", "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   
   --bokana-slate: #5C6670; /* Exact brand slate from logo */
   --bokana-slate-hover: #4A525A;
@@ -42,5 +43,97 @@ body {
 @layer utilities {
   .glass {
     @apply bg-white/80 backdrop-blur-md border border-white/20;
+  }
+
+  .motion-fade {
+    animation: motionFade 700ms ease both;
+  }
+
+  .motion-rise {
+    animation: motionRise 800ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .motion-scale {
+    animation: motionScale 700ms cubic-bezier(0.22, 1, 0.36, 1) both;
+  }
+
+  .motion-drift {
+    animation: motionDrift 7s ease-in-out infinite;
+  }
+
+  .motion-card {
+    transition: transform 300ms ease, box-shadow 300ms ease, border-color 300ms ease;
+  }
+
+  .motion-card:hover {
+    transform: translateY(-6px);
+  }
+
+  .motion-delay-1 {
+    animation-delay: 90ms;
+  }
+
+  .motion-delay-2 {
+    animation-delay: 180ms;
+  }
+
+  .motion-delay-3 {
+    animation-delay: 270ms;
+  }
+
+  .motion-delay-4 {
+    animation-delay: 360ms;
+  }
+}
+
+@keyframes motionFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes motionRise {
+  from {
+    opacity: 0;
+    transform: translateY(22px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes motionScale {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes motionDrift {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 1ms !important;
   }
 }
