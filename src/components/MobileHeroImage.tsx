@@ -1,6 +1,5 @@
 "use client";
 
-import { useEffect, useState } from 'react';
 import Image from 'next/image';
 
 const MOBILE_IMAGES = [
@@ -11,17 +10,7 @@ const MOBILE_IMAGES = [
 ];
 
 export default function MobileHeroImage() {
-  const [imgSrc, setImgSrc] = useState<string | null>(null);
-
-  useEffect(() => {
-    // Select a random image only on the client to avoid hydration mismatch
-    setImgSrc(MOBILE_IMAGES[Math.floor(Math.random() * MOBILE_IMAGES.length)]);
-  }, []);
-
-  if (!imgSrc) {
-    // Empty placeholder to maintain layout while waiting for client render
-    return <div className="absolute inset-0" />;
-  }
+  const imgSrc = MOBILE_IMAGES[0];
 
   // Using a radial mask to softly blend the edges of the images into the dark background
   return (

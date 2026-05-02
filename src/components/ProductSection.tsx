@@ -36,9 +36,9 @@ export default function ProductSection({
   const displayProducts = limit ? productsCatalog.slice(0, limit) : productsCatalog;
 
   return (
-    <section className="py-20 bg-[var(--bokana-blush)]">
+    <section className="motion-fade py-20 bg-[var(--bokana-blush)]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
+        <div className="motion-rise text-center mb-12">
           <h2 className="text-4xl font-bold text-[var(--foreground)] mb-4">{title}</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">{subtitle}</p>
         </div>

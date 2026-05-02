@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function PrivacyPage() {
   return (
-    <div className="py-24 bg-white min-h-screen">
-      <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="motion-fade py-24 bg-white min-h-screen">
+      <div className="motion-rise max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 className="text-4xl font-extrabold text-[var(--foreground)] mb-8">Privacy Policy & Terms of Service</h1>
         <div className="prose prose-lg text-gray-600">
           <p className="mb-6 text-sm text-gray-500">Last updated: October 2023</p>

@@ -9,7 +9,7 @@ export default function MobileBottomNav() {
   const isActive = (path: string) => pathname === path;
 
   return (
-    <nav className="md:hidden fixed bottom-4 left-4 right-4 z-50 mb-[env(safe-area-inset-bottom)] glass shadow-[0_8px_30px_rgba(0,0,0,0.12)] bg-white/90 backdrop-blur-lg border border-white/50 rounded-full">
+    <nav className="motion-rise md:hidden fixed bottom-4 left-4 right-4 z-50 mb-[env(safe-area-inset-bottom)] glass shadow-[0_8px_30px_rgba(0,0,0,0.12)] bg-white/90 backdrop-blur-lg border border-white/50 rounded-full">
       <div className="flex justify-around items-center h-16 px-2">
         <Link href="/products" className={`flex flex-col items-center justify-center w-16 h-full transition-colors ${isActive('/products') ? 'text-[var(--bokana-amber)]' : 'text-gray-500 hover:text-[var(--bokana-slate)]'}`}>
           <svg className="w-6 h-6 mb-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
