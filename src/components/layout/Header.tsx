@@ -1,18 +1,42 @@
-import React from 'react';
+"use client";
+
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Button from '../ui/Button';
 
 export default function Header() {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 20);
+    };
+    
+    // Set initial state
+    handleScroll();
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <header className="sticky top-0 z-50 w-full glass">
+    <header 
+      className={`top-0 z-50 w-full transition-all duration-300 md:sticky md:glass 
+      max-md:fixed ${isScrolled ? 'glass shadow-sm max-md:bg-white/90' : 'bg-transparent max-md:border-none'}`}
+    >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center">
               <img 
+                src={isScrolled ? "/bokana-logo.svg" : "/bokana-logo-white.svg"} 
+                alt="Bokana Electronics" 
+                className="h-12 w-auto md:hidden transition-opacity duration-300"
+              />
+              <img 
                 src="/bokana-logo.svg" 
                 alt="Bokana Electronics" 
-                className="h-12 w-auto"
+                className="h-12 w-auto hidden md:block"
               />
             </Link>
           </div>
@@ -27,13 +51,6 @@ export default function Header() {
             <Button variant="whatsapp" href="https://wa.me/2347070708571">
               Chat on WhatsApp
             </Button>
-          </div>
-          <div className="flex items-center md:hidden">
-            <button className="text-[var(--foreground)] hover:text-[var(--bokana-amber)] focus:outline-none">
-              <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
           </div>
         </div>
       </div>

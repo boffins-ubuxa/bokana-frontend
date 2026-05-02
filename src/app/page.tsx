@@ -3,12 +3,37 @@ import Button from "@/components/ui/Button";
 import ProductSection from "@/components/ProductSection";
 import FeatureCard from "@/components/FeatureCard";
 import TestimonialCard from "@/components/TestimonialCard";
+import MobileHeroImage from "@/components/MobileHeroImage";
 
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
-      {/* Hero Section */}
-      <section className="relative bg-[var(--background)] pt-20 pb-32 overflow-hidden">
+      {/* Mobile Hero Section (Hidden on Desktop) */}
+      <section className="md:hidden relative w-full h-[100dvh] overflow-hidden flex flex-col items-center justify-center bg-gradient-to-br from-[var(--foreground)] via-slate-900 to-black">
+        <div className="absolute inset-0 bg-black/20 backdrop-blur-3xl z-0" />
+        <div className="relative z-10 text-center px-4 mt-[-5dvh]">
+          <h1 className="text-5xl font-extrabold tracking-tight text-white mb-4 drop-shadow-lg">
+            Power You Can <span className="text-[var(--bokana-amber)]">Trust.</span><br />
+            Legacy in Every <span className="text-[var(--bokana-amber)] drop-shadow-md">Charge.</span>
+          </h1>
+        </div>
+        <div className="absolute bottom-0 w-[120%] h-[55%] z-0 translate-y-4">
+          <MobileHeroImage />
+        </div>
+      </section>
+
+      {/* Mobile CTA Buttons (Immediately below the 100dvh viewport) */}
+      <section className="md:hidden w-full bg-[var(--background)] px-4 py-6 flex justify-center gap-3 border-b border-gray-100">
+        <Button href="/products" variant="primary" className="flex-1 py-4 text-base font-semibold shadow-md">
+          Shop Products
+        </Button>
+        <Button variant="whatsapp" href="https://wa.me/2347070708571" className="flex-1 py-4 text-base font-semibold shadow-md">
+          WhatsApp
+        </Button>
+      </section>
+
+      {/* Desktop Hero Section (Hidden on Mobile) */}
+      <section className="hidden md:block relative bg-[var(--background)] pt-20 pb-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[var(--legacy-gray)] to-white pointer-events-none" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
