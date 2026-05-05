@@ -3,10 +3,7 @@
 import Image from 'next/image';
 
 const MOBILE_IMAGES = [
-  // '/products/bokana-hero.png',
-  // '/products/fan.jpeg',
-  '/products/transparent.png',
-  // '/products/bokana50mah.png',
+  '/products/powerbank-50k-all.jpeg',
 ];
 
 export default function MobileHeroImage() {

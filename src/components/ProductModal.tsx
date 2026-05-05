@@ -1,5 +1,6 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
 import { Product, ProductVariant } from '@/data/products';
 import ProductMediaView from './ProductMediaView';
 import Button from './ui/Button';
@@ -12,10 +13,16 @@ interface ProductModalProps {
 }
 
 export default function ProductModal({ product, initialVariant, isOpen, onClose }: ProductModalProps) {
+  const [mounted, setMounted] = useState(false);
   const [selectedVariant, setSelectedVariant] = React.useState<ProductVariant | undefined>(
     initialVariant || (product.variants ? product.variants[0] : undefined)
   );
   const [activeMediaIndex, setActiveMediaIndex] = React.useState(0);
+
+  useEffect(() => {
+    setMounted(true);
+    return () => setMounted(false);
+  }, []);
 
   // Prevent background scrolling when open
   useEffect(() => {
@@ -37,19 +44,31 @@ export default function ProductModal({ product, initialVariant, isOpen, onClose 
   const whatsappMessage = encodeURIComponent(`Hi, I am interested in ordering the ${product.name}${selectedVariant ? ` (${selectedVariant.color})` : ''}.`);
   const whatsappUrl = `https://wa.me/2347070708571?text=${whatsappMessage}`;
 
-  return (
-    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4 sm:p-6">
+  const modalContent = (
+    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4 sm:p-6 overflow-hidden">
+      {/* Backdrop */}
       <div 
-        className="absolute inset-0 bg-black/60 backdrop-blur-sm transition-opacity"
+        className="absolute inset-0 bg-black/80 backdrop-blur-md transition-opacity"
         onClick={onClose}
       />
       
+      {/* Mobile Close Button - HIGHEST Z-INDEX, TOP-MOST POSITION */}
+      <button 
+        onClick={onClose}
+        className="fixed top-4 right-4 z-[10000] md:hidden w-12 h-12 bg-white rounded-full flex items-center justify-center text-black shadow-2xl transition-all active:scale-90"
+        aria-label="Close modal"
+      >
+        <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+
+      {/* Modal Container */}
       <div className="bg-white rounded-3xl w-full max-w-4xl max-h-[90vh] overflow-hidden flex flex-col md:flex-row relative z-10 shadow-2xl animate-in fade-in zoom-in-95 duration-300">
-        
-        {/* Close Button */}
+        {/* Desktop Close Button */}
         <button 
           onClick={onClose}
-          className="absolute top-4 right-4 z-20 w-10 h-10 bg-white/80 backdrop-blur-md rounded-full flex items-center justify-center text-[var(--foreground)] hover:bg-gray-100 transition-colors shadow-sm"
+          className="absolute top-4 right-4 z-20 w-10 h-10 bg-white/80 backdrop-blur-md rounded-full hidden md:flex items-center justify-center text-[var(--foreground)] hover:bg-gray-100 transition-colors shadow-sm"
           aria-label="Close modal"
         >
           <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -153,4 +172,6 @@ export default function ProductModal({ product, initialVariant, isOpen, onClose 
       </div>
     </div>
   );
+
+  return mounted ? createPortal(modalContent, document.body) : null;
 }

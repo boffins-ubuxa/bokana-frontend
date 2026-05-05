@@ -159,7 +159,7 @@ export default function AboutPage() {
               <div className="relative mx-auto max-w-lg overflow-hidden rounded-[2rem] border border-white/15 bg-white/10 p-3 shadow-2xl backdrop-blur-sm">
                 <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-black/20">
                   <Image
-                    src="/products/powerbank-50k-black.jpeg"
+                    src="/products/powerbank-50k-white.jpeg"
                     alt="Bokana high-capacity power bank"
                     fill
                     sizes="(max-width: 1024px) 90vw, 520px"
@@ -212,6 +212,100 @@ export default function AboutPage() {
                   <p className="mt-3 text-sm leading-7 text-gray-600">{pillar.description}</p>
                 </article>
               ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 bg-[var(--bokana-blush)]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
+            <div className="motion-scale">
+              <div className="relative overflow-hidden rounded-[2rem] bg-white p-3 shadow-xl shadow-black/5">
+                <div className="relative aspect-[4/5] overflow-hidden rounded-[1.5rem] bg-[var(--legacy-gray)]">
+                  <Image
+                    src="/products/powerbank-10k-skyblue.jpeg"
+                    alt="Bokana Power legacy product"
+                    fill
+                    sizes="(max-width: 1024px) 90vw, 520px"
+                    className="object-cover motion-drift"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/5 to-transparent" />
+                  <div className="absolute bottom-5 left-5 right-5 rounded-2xl border border-white/20 bg-black/35 p-4 text-white backdrop-blur-md">
+                    <p className="text-sm font-semibold uppercase tracking-[0.18em] text-[var(--bokana-amber)]">
+                      The Bokana Standard
+                    </p>
+                    <p className="mt-2 text-xl font-bold">
+                      Do it right, or don’t do it at all.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="motion-rise motion-delay-1">
+              <p className="text-sm font-bold uppercase tracking-[0.22em] text-[var(--bokana-amber)]">
+                Our Story
+              </p>
+
+              <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-[var(--foreground)] sm:text-4xl">
+                The legacy continues.
+              </h2>
+
+              <p className="mt-4 text-xl font-semibold leading-8 text-[var(--bokana-slate)]">
+                More than a power bank. It’s a promise.
+              </p>
+
+              <div className="mt-6 space-y-5 text-lg leading-8 text-gray-600">
+                <p>
+                  Bokana Electronics was born from a legacy that began with{" "}
+                  <span className="font-semibold text-[var(--foreground)]">
+                    Bokana West Africa Ltd.
+                  </span>
+                  , a company founded by a father who believed in reliability, service,
+                  and the power of building something that could serve people beyond one
+                  generation.
+                </p>
+
+                <p>
+                  When we lost him, we did not only inherit a name. We inherited a
+                  standard — a standard of doing business with integrity, choosing quality
+                  over shortcuts, and creating value that people can trust.
+                </p>
+
+                <p>
+                  Today, Bokana Electronics carries that vision forward by providing
+                  dependable power banks, mini fans, and everyday electronics designed for
+                  real life — for work, travel, school, business, outages, and the daily
+                  hustle.
+                </p>
+
+                <p>
+                  <span className="font-semibold text-[var(--foreground)]">
+                    Bokana Power
+                  </span>{" "}
+                  is our tribute to that legacy. Every product we offer is guided by the
+                  same principle our founder believed in:{" "}
+                  <span className="font-semibold text-[var(--foreground)]">
+                    do it right, or don’t do it at all.
+                  </span>
+                </p>
+
+                <p>
+                  We are not just selling devices. We are putting dependable energy in
+                  people’s hands — for their phones, their work, their movement, their
+                  comfort, and their peace of mind.
+                </p>
+              </div>
+
+              <div className="mt-8 rounded-2xl border border-[var(--bokana-amber)]/20 bg-white p-6 shadow-sm">
+                <p className="text-lg font-bold leading-8 text-[var(--foreground)]">
+                  Because at Bokana, power is more than convenience.
+                </p>
+                <p className="mt-2 text-2xl font-extrabold leading-9 text-[var(--bokana-amber)]">
+                  It is trust. It is continuity. It is a promise.
+                </p>
+              </div>
             </div>
           </div>
         </div>

@@ -7,6 +7,11 @@ import MobileBottomNav from "@/components/layout/MobileBottomNav";
 export const metadata: Metadata = {
   title: "Bokana Electronics | More Than a Powerbank. It's a Promise.",
   description: "Bokana Electronics provides reliable powerbanks, mini fans, and everyday electronics built for modern life, Nigerian power realities, and people who need dependable energy on the go.",
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({

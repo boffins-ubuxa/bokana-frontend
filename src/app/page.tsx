@@ -56,7 +56,7 @@ export default function Home() {
             </div>
             <div className="motion-scale motion-delay-1 relative h-[400px] lg:h-[600px] rounded-3xl overflow-hidden shadow-2xl">
               <Image
-                src="/products/powerbank-50k-black.jpeg"
+                src="/products/powerbank-50k-all.jpeg"
                 alt="Bokana Super Fast Charge Power Bank"
                 fill
                 className="object-cover"

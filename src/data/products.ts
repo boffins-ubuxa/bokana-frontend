@@ -54,6 +54,13 @@ export const productsCatalog: Product[] = [
         media: [
           { type: 'image', url: '/products/powerbank-10k-white.jpeg' }
         ]
+      },
+      {
+        color: "Sky Blue",
+        colorCode: "#87CEEB",
+        media: [
+          { type: 'image', url: '/products/powerbank-10k-skyblue.jpeg' }
+        ]
       }
     ]
   },
@@ -64,7 +71,7 @@ export const productsCatalog: Product[] = [
     features: ["50,000mAh Capacity", "LED Display", "Multiple Outputs", "Fast Charging"],
     category: "Power Banks",
     media: [
-      { type: 'image', url: '/products/powerbank-50k-black.jpeg' }
+      { type: 'image', url: '/products/powerbank-50k-all.jpeg' }
     ],
     variants: [
       {
@@ -80,6 +87,20 @@ export const productsCatalog: Product[] = [
         media: [
           { type: 'image', url: '/products/powerbank-50k-red.jpeg' }
         ]
+      },
+      {
+        color: "Soft White",
+        colorCode: "#FDFBF7",
+        media: [
+          { type: 'image', url: '/products/powerbank-50k-white.jpeg' }
+        ]
+      },
+      {
+        color: "Sunset Yellow",
+        colorCode: "#FBBF24",
+        media: [
+          { type: 'image', url: '/products/powerbank-50k-yellow.jpeg' }
+        ]
       }
     ]
   },
@@ -90,7 +111,7 @@ export const productsCatalog: Product[] = [
     features: ["AC Coolant Tech", "Adjustable Speeds", "Quiet Operation"],
     category: "Fans",
     media: [
-      { type: 'image', url: '/products/fan.jpeg' },
+      { type: 'image', url: '/products/cooling-fan.jpeg' },
       { type: 'video', url: '/products/fan-video.mp4' }
     ]
   },
@@ -101,7 +122,7 @@ export const productsCatalog: Product[] = [
     features: ["Rechargeable", "3 Speed Settings", "Ultra Quiet"],
     category: "Fans",
     media: [
-      { type: 'image', url: '/products/mini-fan.jpg' }
+      { type: 'image', url: '/products/mini-fan.png' }
     ]
   },
   {
@@ -111,7 +132,7 @@ export const productsCatalog: Product[] = [
     features: ["Hands-free Design", "360° Airflow", "Lightweight"],
     category: "Fans",
     media: [
-      { type: 'image', url: '/products/neck-fan.jpg' }
+      { type: 'image', url: '/products/neck-fan.png' }
     ]
   },
   {
@@ -121,7 +142,7 @@ export const productsCatalog: Product[] = [
     features: ["Deep Bass", "Waterproof", "Long Battery Life"],
     category: "Audio",
     media: [
-      { type: 'image', url: '/products/jbl-speaker.jpg' }
+      { type: 'image', url: '/products/jbl-speaker.png' }
     ]
   },
   {
@@ -131,7 +152,7 @@ export const productsCatalog: Product[] = [
     features: ["Bluetooth 5.0", "Stereo Pairing", "Premium Finish"],
     category: "Audio",
     media: [
-      { type: 'image', url: '/products/bluetooth-speaker.jpg' }
+      { type: 'image', url: '/products/bluetooth-speaker.png' }
     ]
   },
   {
@@ -151,7 +172,7 @@ export const productsCatalog: Product[] = [
     features: ["Adjustable Warmth", "Rechargeable", "Universal Clip"],
     category: "Accessories",
     media: [
-      { type: 'image', url: '/products/selfie-light.jpg' }
+      { type: 'image', url: '/products/selfie-light.png' }
     ]
   },
   {

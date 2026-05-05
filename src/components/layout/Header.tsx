@@ -84,15 +84,20 @@ export default function Header() {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            {navLinks.map((link) => (
-              <Link 
-                key={link.name} 
-                href={link.href} 
-                className="text-sm font-medium text-foreground hover:text-[var(--bokana-amber)] transition-colors"
-              >
-                {link.name}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href));
+              return (
+                <Link 
+                  key={link.name} 
+                  href={link.href} 
+                  className={`text-sm font-medium transition-colors hover:text-[var(--bokana-amber)] ${
+                    isActive ? 'text-[var(--bokana-amber)]' : 'text-foreground'
+                  }`}
+                >
+                  {link.name}
+                </Link>
+              );
+            })}
           </nav>
 
           <div className="hidden md:flex items-center">
@@ -101,8 +106,8 @@ export default function Header() {
             </Button>
           </div>
 
-          {/* Mobile Menu Toggle */}
-          <div className="flex items-center md:hidden">
+          {/* Mobile Menu Toggle - Hidden as navigation is handled by MobileBottomNav */}
+          <div className="hidden">
             <button 
               onClick={() => setIsOpen(!isOpen)}
               className="relative w-10 h-10 flex flex-col items-center justify-center focus:outline-none z-50"
