@@ -106,78 +106,78 @@ export const productsCatalog: Product[] = [
   },
   {
     id: "ac-coolant-fan",
-    name: "AC Coolant Fan",
+    name: "Bokana AC Coolant Fan",
     description: "Powerful cooling fan with AC coolant technology for refreshing relief on hot days.",
     features: ["AC Coolant Tech", "Adjustable Speeds", "Quiet Operation"],
     category: "Fans",
     media: [
-      { type: 'image', url: '/products/cooling-fan.jpeg' },
+      { type: 'image', url: '/products/cooling-fan.jpg' },
       { type: 'video', url: '/products/fan-video.mp4' }
     ]
   },
   {
     id: "mini-fan",
-    name: "Mini Fan",
+    name: "Bokana Mini Fan",
     description: "Rechargeable portable cooling fan with 3 speeds. Elegant and easy to carry in any bag.",
     features: ["Rechargeable", "3 Speed Settings", "Ultra Quiet"],
     category: "Fans",
     media: [
-      { type: 'image', url: '/products/mini-fan.png' }
+      { type: 'image', url: '/products/mini-fan.jpg' }
     ]
   },
   {
     id: "neck-fan",
-    name: "Neck Fan",
+    name: "Bokana Neck Fan",
     description: "Wearable neck fan for hands-free cooling while working, exercising, or relaxing.",
     features: ["Hands-free Design", "360° Airflow", "Lightweight"],
     category: "Fans",
     media: [
-      { type: 'image', url: '/products/neck-fan.png' }
+      { type: 'image', url: '/products/neck-fan.jpg' }
     ]
   },
   {
     id: "jbl-speaker",
-    name: "JBL Speaker",
+    name: "Bokana Speaker",
     description: "Premium portable Bluetooth speaker with deep bass and crystal clear sound.",
     features: ["Deep Bass", "Waterproof", "Long Battery Life"],
     category: "Audio",
     media: [
-      { type: 'image', url: '/products/jbl-speaker.png' }
+      { type: 'image', url: '/products/jbl-speaker.jpg' }
     ]
   },
   {
     id: "bluetooth-speaker",
-    name: "Bluetooth Speaker",
+    name: "Bokana Bluetooth Speaker",
     description: "Elegant portable speaker that blends perfectly into your home decor while delivering great sound.",
     features: ["Bluetooth 5.0", "Stereo Pairing", "Premium Finish"],
     category: "Audio",
     media: [
-      { type: 'image', url: '/products/bluetooth-speaker.png' }
+      { type: 'image', url: '/products/bluetooth-speaker.jpg' }
     ]
   },
   {
     id: "perk-earbud",
-    name: "Perk Earbud",
+    name: "Bokana Perk Earbuds",
     description: "Stylish wireless earbuds with active noise cancellation and a comfortable fit.",
     features: ["Active Noise Cancellation", "Touch Controls", "Comfort Fit"],
     category: "Audio",
     media: [
-      { type: 'image', url: '/products/perk-earbud.jpeg' }
+      { type: 'image', url: '/products/perk-earbud.jpg' }
     ]
   },
   {
     id: "selfie-light",
-    name: "Selfie Light",
+    name: "Bokana Selfie Light",
     description: "Clip-on ring light for smartphones to give you perfect, soft lighting anywhere.",
     features: ["Adjustable Warmth", "Rechargeable", "Universal Clip"],
     category: "Accessories",
     media: [
-      { type: 'image', url: '/products/selfie-light.png' }
+      { type: 'image', url: '/products/selfie-light.jpg' }
     ]
   },
   {
     id: "ai-smart-glasses",
-    name: "AI Smart Glasses",
+    name: "Bokana AI Smart Glasses",
     description: "Stylish smart glasses with built-in audio and AI assistant integration.",
     features: ["Built-in Audio", "AI Assistant", "UV Protection"],
     category: "Accessories",
