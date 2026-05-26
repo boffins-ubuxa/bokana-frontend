@@ -36,7 +36,7 @@ export const blogPosts: BlogPost[] = [
         date: "May 3, 2026",
         readTime: "5 min read",
         author: "Bokana Electronics",
-        image: "/products/cooling-fan.jpg",
+        image: "/products/fan images.jpeg",
         excerpt:
             "A power bank is more than just capacity. Safety protection helps protect your phone, your battery, and your peace of mind.",
         content: [

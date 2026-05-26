@@ -8,12 +8,16 @@ interface ProductSectionProps {
   title?: string;
   subtitle?: string;
   limit?: number;
+  category?: string;
+  excludeCategory?: string;
 }
 
 export default function ProductSection({ 
   title = "Everyday Power Solutions", 
   subtitle = "Built to keep you connected when it matters most.",
-  limit
+  limit,
+  category,
+  excludeCategory
 }: ProductSectionProps) {
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [selectedVariant, setSelectedVariant] = useState<ProductVariant | undefined>(undefined);
@@ -33,7 +37,16 @@ export default function ProductSection({
     }, 300); // Wait for transition before clearing data
   };
 
-  const displayProducts = limit ? productsCatalog.slice(0, limit) : productsCatalog;
+  let displayProducts = productsCatalog;
+  if (category) {
+    displayProducts = displayProducts.filter(p => p.category === category);
+  }
+  if (excludeCategory) {
+    displayProducts = displayProducts.filter(p => p.category !== excludeCategory);
+  }
+  if (limit) {
+    displayProducts = displayProducts.slice(0, limit);
+  }
 
   return (
     <section className="motion-fade py-20 bg-[var(--bokana-blush)]">

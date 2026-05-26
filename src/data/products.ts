@@ -111,8 +111,9 @@ export const productsCatalog: Product[] = [
     features: ["AC Coolant Tech", "Adjustable Speeds", "Quiet Operation"],
     category: "Fans",
     media: [
-      { type: 'image', url: '/products/cooling-fan.jpg' },
-      { type: 'video', url: '/products/fan-video.mp4' }
+      { type: 'video', url: '/products/fan-video.mp4' },
+      { type: 'video', url: '/products/fan video2.mp4' },
+      { type: 'image', url: '/products/fan images.jpeg' }
     ]
   },
   {
@@ -122,7 +123,7 @@ export const productsCatalog: Product[] = [
     features: ["Rechargeable", "3 Speed Settings", "Ultra Quiet"],
     category: "Fans",
     media: [
-      { type: 'image', url: '/products/mini-fan.jpg' }
+      { type: 'image', url: '/products/fan images.jpeg' }
     ]
   },
   {
@@ -132,7 +133,7 @@ export const productsCatalog: Product[] = [
     features: ["Hands-free Design", "360° Airflow", "Lightweight"],
     category: "Fans",
     media: [
-      { type: 'image', url: '/products/neck-fan.jpg' }
+      { type: 'video', url: '/products/neck fan video.mp4' }
     ]
   },
   {
@@ -146,13 +147,13 @@ export const productsCatalog: Product[] = [
     ]
   },
   {
-    id: "bluetooth-speaker",
-    name: "Bokana Bluetooth Speaker",
-    description: "Elegant portable speaker that blends perfectly into your home decor while delivering great sound.",
-    features: ["Bluetooth 5.0", "Stereo Pairing", "Premium Finish"],
-    category: "Audio",
+    id: "wrist-sphygmomanometer",
+    name: "Bokana Wrist Electronic Sphygmomanometer",
+    description: "Monitor your health with precision. This wrist electronic blood pressure monitor provides fast, accurate readings with an easy-to-read digital screen.",
+    features: ["High Accuracy", "Wrist Cuff Design", "One-Touch Operation", "LCD Digital Display"],
+    category: "Health",
     media: [
-      { type: 'image', url: '/products/bluetooth-speaker.jpg' }
+      { type: 'video', url: '/products/wrist-sphygmomanometer.mp4' }
     ]
   },
   {
@@ -162,7 +163,8 @@ export const productsCatalog: Product[] = [
     features: ["Active Noise Cancellation", "Touch Controls", "Comfort Fit"],
     category: "Audio",
     media: [
-      { type: 'image', url: '/products/perk-earbud.jpg' }
+      { type: 'image', url: '/products/perk ear bur.jpeg' },
+      { type: 'video', url: '/products/video earphone.mp4' }
     ]
   },
   {
@@ -183,6 +185,50 @@ export const productsCatalog: Product[] = [
     category: "Accessories",
     media: [
       { type: 'video', url: '/products/glasses-video.mp4' }
+    ]
+  },
+  {
+    id: "custom-birthday-powerbank",
+    name: "Custom Birthday Power Bank",
+    description: "Celebrate milestones with a personalized power bank. Send us any photo or birthday greeting, and we will custom print it on the device. Perfect as a memorable, practical gift.",
+    features: ["Personalized Photo Print", "High-Quality UV Printing", "Includes Gift Packaging", "10,000mAh Capacity"],
+    category: "Customized",
+    media: [
+      { type: 'image', url: '/products/birthday powerbank.jpeg' }
+    ]
+  },
+  {
+    id: "custom-10k-powerbank",
+    name: "Custom 10,000mAh Power Bank",
+    description: "Personalize your everyday carry. Send us any image, artwork, or quote to custom print on this high-capacity 10,000mAh power bank.",
+    features: ["Your Custom Image Print", "High-Quality UV Printing", "Fast Charging Support", "10,000mAh Capacity"],
+    category: "Customized",
+    media: [
+      { type: 'image', url: '/products/customised 10,000amh.jpeg' }
+    ]
+  },
+  {
+    id: "custom-fan",
+    name: "Customized Cooling Fan",
+    description: "Keep cool in style with a customized fan. Personalize it with your favorite images, patterns, or name printed directly on the fan body.",
+    features: ["Personalized Fan Case Print", "Rechargeable Battery", "Adjustable Airflow Speed"],
+    category: "Customized",
+    media: [
+      { type: 'image', url: '/products/customised fan.jpeg' }
+    ]
+  },
+  {
+    id: "custom-video-powerbank",
+    name: "Custom Video Power Bank 10,000mAh",
+    description: "A custom power bank that speaks volumes. Upload your custom print and enjoy a built-in video display, perfect for interactive gifts or premium promotional displays.",
+    features: ["Video & Photo Customization", "Built-in Video Playback", "10,000mAh Power Bank", "Perfect Keepsake or Favor"],
+    category: "Customized",
+    media: [
+      { 
+        type: 'video', 
+        url: '/products/customised video power bank 10,000amh.mp4',
+        poster: '/products/customised 10,000amh.jpeg'
+      }
     ]
   }
 ];

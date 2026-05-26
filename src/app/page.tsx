@@ -100,6 +100,7 @@ export default function Home() {
       <ProductSection
         title="Everyday Power Solutions"
         subtitle="Built to keep you connected when it matters most."
+        excludeCategory="Customized"
         limit={6}
       />
 
@@ -134,6 +135,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Customized Products Section */}
+      <ProductSection
+        title="Customized Celebrations & Events"
+        subtitle="Make your milestones memorable with custom-printed photos and designs on premium power banks for birthdays, weddings, anniversaries, and corporate gifts."
+        category="Customized"
+      />
 
       {/* Legacy Story Section */}
       <section className="motion-fade py-24 bg-[var(--foreground)] text-white relative overflow-hidden">
