@@ -106,7 +106,7 @@ export const productsCatalog: Product[] = [
   },
   {
     id: "ac-coolant-fan",
-    name: "Bokana AC Coolant Fan",
+    name: "AC Coolant Fan",
     description: "Powerful cooling fan with AC coolant technology for refreshing relief on hot days.",
     features: ["AC Coolant Tech", "Adjustable Speeds", "Quiet Operation"],
     category: "Fans",
@@ -118,7 +118,7 @@ export const productsCatalog: Product[] = [
   },
   {
     id: "mini-fan",
-    name: "Bokana Mini Fan",
+    name: "Mini Fan",
     description: "Rechargeable portable cooling fan with 3 speeds. Elegant and easy to carry in any bag.",
     features: ["Rechargeable", "3 Speed Settings", "Ultra Quiet"],
     category: "Fans",
@@ -128,7 +128,7 @@ export const productsCatalog: Product[] = [
   },
   {
     id: "neck-fan",
-    name: "Bokana Neck Fan",
+    name: "Neck Fan",
     description: "Wearable neck fan for hands-free cooling while working, exercising, or relaxing.",
     features: ["Hands-free Design", "360° Airflow", "Lightweight"],
     category: "Fans",
@@ -138,7 +138,7 @@ export const productsCatalog: Product[] = [
   },
   {
     id: "jbl-speaker",
-    name: "Bokana Speaker",
+    name: "Speaker",
     description: "Premium portable Bluetooth speaker with deep bass and crystal clear sound.",
     features: ["Deep Bass", "Waterproof", "Long Battery Life"],
     category: "Audio",

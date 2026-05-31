@@ -108,7 +108,7 @@ export default function ContactPage() {
                   <option value="Bokana Power Mini">Bokana Power Mini</option>
                   <option value="Bokana Power Pro">Bokana Power Pro</option>
                   <option value="Bokana Power Ultra">Bokana Power Ultra</option>
-                  <option value="Bokana Mini Fan">Bokana Mini Fan</option>
+                  <option value="Mini Fan">Mini Fan</option>
                   <option value="Bulk Order / General Enquiry">Bulk Order / General Enquiry</option>
                 </select>
               </div>
