@@ -148,7 +148,7 @@ export const productsCatalog: Product[] = [
   },
   {
     id: "wrist-sphygmomanometer",
-    name: "Bokana Wrist Electronic Sphygmomanometer",
+    name: "Wrist Electronic Sphygmomanometer",
     description: "Monitor your health with precision. This wrist electronic blood pressure monitor provides fast, accurate readings with an easy-to-read digital screen.",
     features: ["High Accuracy", "Wrist Cuff Design", "One-Touch Operation", "LCD Digital Display"],
     category: "Health",
@@ -158,7 +158,7 @@ export const productsCatalog: Product[] = [
   },
   {
     id: "perk-earbud",
-    name: "Bokana Perk Earbuds",
+    name: "Perk Earbuds",
     description: "Stylish wireless earbuds with active noise cancellation and a comfortable fit.",
     features: ["Active Noise Cancellation", "Touch Controls", "Comfort Fit"],
     category: "Audio",
@@ -169,7 +169,7 @@ export const productsCatalog: Product[] = [
   },
   {
     id: "selfie-light",
-    name: "Bokana Selfie Light",
+    name: "Selfie Light",
     description: "Clip-on ring light for smartphones to give you perfect, soft lighting anywhere.",
     features: ["Adjustable Warmth", "Rechargeable", "Universal Clip"],
     category: "Accessories",
@@ -179,7 +179,7 @@ export const productsCatalog: Product[] = [
   },
   {
     id: "ai-smart-glasses",
-    name: "Bokana AI Smart Glasses",
+    name: "AI Smart Glasses",
     description: "Stylish smart glasses with built-in audio and AI assistant integration.",
     features: ["Built-in Audio", "AI Assistant", "UV Protection"],
     category: "Accessories",
